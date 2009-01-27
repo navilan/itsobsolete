@@ -1,0 +1,64 @@
+body {
+    text-align: center;
+    font-size: 250%;
+    background-color: #3A4754;
+    margin: 0;
+}
+
+#content {
+    margin: 0 auto 16px;
+    padding-bottom: 32px;
+    background-color: white;
+    width: 900px;
+}
+
+.cell {
+    width: 40%;
+    float: left;
+    margin: 32px;
+}
+
+.cell img {
+    width: 360px;
+    height: 360px;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix { zoom: 1; }
+
+.full {
+    width: 900px;
+    margin: 0 auto;
+    float: none;
+    clear: both;
+}
+
+ul.full {
+    list-style-type: none;
+    padding: 0;
+    height: 140px;
+}
+
+li {
+    display: inline;
+    margin: 10px;
+}
+
+li img {
+    width: 3em;
+    border: 0;
+    height: 3em;
+}
+
+#message {
+    font-size: 50%;
+    background-color: #90b2d5;
+    width: 900px;
+}

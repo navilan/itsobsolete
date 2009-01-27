@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <title>
+            IE6 is obsolete
+        </title>
+        <script type="text/javascript" charset="utf-8">
+//<![CDATA[
+            <!-- 
+            window.onload = show_referrer;
+            function show_referrer(){
+                var title = null;
+                var url = null;
+                var qs = window.location.search;
+                                
+                this.evaluateParameter = function(param){
+                    var kvp = param.split("=");
+                    if (kvp.length == 2){
+                         if (kvp[0].toLowerCase() == "title"){
+                             this.title = unescape(kvp[1]);
+                         } else if (kvp[0].toLowerCase() == "url"){
+                              this.url = unescape(kvp[1]);   
+                        }
+                    }
+                };
+                
+                if(qs && qs.length){
+                    qs = qs.substring(1, qs.length);
+                    var values = qs.split("&");
+                    for(i=0; i < values.length;i++){
+                        this.evaluateParameter(values[i]);
+                    }
+                    if (!this.url && !document.referrer) return;
+                    if(!this.url) this.url = document.referrer;
+                    var metoo = document.getElementById("metoo");
+                    metoo.style.display = "";
+                    var referrer = document.getElementById("referrer");
+                    referrer.href = this.url;
+                    if(this.title){
+                        referrer.innerText = this.title;                        
+                    }
+                }
+            }
+            // -->
+        //]]>
+        </script>
+        <link rel="stylesheet" href="/media/css/base.css" type="text/css" media="screen" charset="utf-8" />
+    </head>
+    <body>
+        <div id="content" class="clearfix">
+            <div class="cell">
+                You were asleep<img src="/media/images/zzzcat.jpg" alt="Asleep" />
+            </div>
+            <div class="cell">
+                We moved on<img src="/media/images/world_moved_on.jpg" alt="Moved On" />
+            </div>
+            <div class="cell">
+                Now you are slowing us down! <img src="/media/images/slowing_down.jpg" alt="You are slow" />
+            </div>
+            <div class="cell">
+                Time for you to pick a fast one. <img src="/media/images/fast-car.jpg" alt="fast car" />
+            </div>
+            <ul class="full">
+                <li>
+                    <a href="http://www.mozilla.com/firefox?from=sfx&amp;uid=254777&amp;t=331"><img border="0" alt="Spreadfirefox Affiliate Button" src="http://sfx-images.mozilla.org/affiliates/Buttons/firefox3/125x125FF3.png" /></a>
+                </li>
+                <li>
+                    <a href="http://my.opera.com/ezlux/affiliate/"><img src="http://promote.opera.com/opera9/125x125opera9.gif" width="125" height="125" alt="Opera, the fastest and most beautiful browser on the planet. download now" /></a>
+                </li>
+                <li>
+                    <a href="http://www.apple.com/safari/download"><img src="/media/images/120px-Apple_Safari.png" alt="Apple Safari" /></a>
+                </li>
+                <li>
+                    <a href="http://www.google.com/chrome"><img src="/media/images/GoogleChromeLogo.png" alt="Google Chrome" /></a>
+                </li>
+            </ul>
+            <div class="full">
+                You can get them all for free!
+            </div>
+        </div>
+        <div id="message" class="full">
+            <div>
+                <a href="http://mail.google.com/support/bin/answer.py?hl=en&amp;answer=6557">Google</a>, <a href="http://37signals.blogs.com/products/2008/07/basecamp-phasin.html">37signals</a> and many others do not support IE6.
+            </div>
+            <div style="display:none" id="metoo">
+                So does <a id="referrer" name="referer">the website you accessed.</a>
+            </div>
+            <div>
+                <a href="/ie6faq.html">F.A.Q</a>
+            </div>
+        </div>
+    </body>
+</html>
